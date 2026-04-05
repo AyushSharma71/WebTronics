@@ -4,23 +4,8 @@ A full-stack shopping web application built with React, Node.js, Express, and Mo
 
 ## Quick Setup
 
-### Step 1: Run the Setup Script
 
-First, run the batch file to create folders (Windows):
-
-```cmd
-setup-folders.bat
-```
-
-### Step 2: Create All Files
-
-Run the Node.js script to create all project files:
-
-```cmd
-node create-files.js
-```
-
-### Step 3: Install & Run Backend
+### Step 1: Install & Run Backend
 
 ```bash
 cd backend
@@ -29,7 +14,7 @@ npm run seed    # Seeds the database with sample products and users
 npm run dev     # Starts backend on http://localhost:5000
 ```
 
-### Step 4: Install & Run Frontend
+### Step 2: Install & Run Frontend
 
 Open a new terminal:
 
