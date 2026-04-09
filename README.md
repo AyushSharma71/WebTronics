@@ -164,5 +164,9 @@ The website contains following bugs:
 4. Broken Mobile UI
 5. Cart state not updating
 6. Missing error handling
+7. Race condition
+8. CSS/Tailwind CSS Error
+9. Token Case Sensitivity Bug
+10. Database Infinite Connection Loop
 
 Good luck!

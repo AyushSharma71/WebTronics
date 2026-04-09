@@ -29,9 +29,17 @@ const useCartStore = create((set, get) => ({
     const items = get().items;
     const item = items.find(item => item._id === productId);
     if (item) {
-      item.quantity = quantity;
+      setTimeout(() => {
+        const currentItems = get().items;
+        const currentItem = currentItems.find(i => i._id === productId);
+        if (currentItem) {
+          currentItem.quantity = quantity;
+          set({ items: [...currentItems] });
+        }
+      }, 100);
+    } else {
+      set({ items: items });
     }
-    set({ items: items });
   },
 
   clearCart: () => {
