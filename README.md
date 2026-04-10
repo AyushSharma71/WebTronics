@@ -4,7 +4,6 @@ A full-stack shopping web application built with React, Node.js, Express, and Mo
 
 ## Quick Setup
 
-
 ### Step 1: Install & Run Backend
 
 ```bash
@@ -132,6 +131,9 @@ webtronics/
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/login` - Login user
 - `GET /api/auth/profile` - Get user profile (protected)
+- `POST /api/auth/wishlist/:productId` - Add product to wishlist (protected)
+- `DELETE /api/auth/wishlist/:productId` - Remove product from wishlist (protected)
+- `GET /api/auth/wishlist` - Get logged-in user's wishlist products (protected)
 
 ### Products
 
@@ -154,19 +156,16 @@ MONGODB_URI=mongodb://localhost:27017/webtronics
 JWT_SECRET=supersecretkey123
 ```
 
-## Notes for Competition
+## Notes for Round 1
 
 The website contains following bugs:
 
-1. Infinite API calls (frontend)
-2. Auth logout on refresh (frontend)
-3. No form validation
-4. Broken Mobile UI
-5. Cart state not updating
-6. Missing error handling
-7. Race condition
-8. CSS/Tailwind CSS Error
-9. Token Case Sensitivity Bug
-10. Database Infinite Connection Loop
+1. Database Connection Error (backend) - 10 pts
+2. Broken Products page (frontend) - 20 pts
+3. Broken Product details page (frontend) - 10 pts
+4. Auth logout on refresh (frontend) - 10 pts
+5. No form validation (frontend) - 15 pts
+6. Missing error handling (frontend) - 10 pts
+7. Disable cart if user not logged in (frontend) - 25 pts
 
 Good luck!
