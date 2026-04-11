@@ -169,3 +169,21 @@ The website contains following bugs:
 7. Disable cart if user not logged in (frontend) - 25 pts
 
 Good luck!
+
+## Round 2 – Feature Implementation Requirements
+
+The website currently lacks the following functionalities. Participants are required to implement these features as part of this round:
+
+### 1. Dark Mode Implementation (30 Points)
+Develop a toggle mechanism that enables users to switch between light and dark themes. The selected theme should be applied consistently across the entire application.
+
+### 2. Responsive Design (30 Points)
+Enhance the website’s layout and styling to ensure optimal usability and visual consistency across various devices, particularly mobile screens.
+
+### 3. Wishlist Functionality (40 Points)
+Implement a wishlist feature with the following capabilities:
+- Add an “Add to Wishlist” option on the product details page.
+- Create a dedicated wishlist component/page to display all selected products.
+- Allow users to remove items from the wishlist as needed.
+
+Good luck!
