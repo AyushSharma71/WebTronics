@@ -18,7 +18,9 @@ const useAuthStore = create((set) => ({
 
   register: async (name, email, password) => {
     set({ isLoading: true, error: null });
-    const response = await API.post('/auth/register', { name, email, password });
+    const response = await API.post('/auth/register', 
+      { name, email, password }
+    );
     const { token, ...userData } = response.data;
     localStorage.setItem('token', token);
     set({ user: userData, token, isLoading: false });
@@ -32,9 +34,22 @@ const useAuthStore = create((set) => ({
 
   checkAuth: async () => {
     const token = localStorage.getItem('token');
-    if (token) {
+    if (!token) {
+      set({user:null,token:null});
+      return;
+    }
+    try{
       const response = await API.get('/auth/profile');
       set({ user: response.data, token });
+    }catch(error){
+      console.error(
+        'Authentication restore failed',
+        error.response?.status,
+        error.message
+      );
+
+      localStorage.removeItem('token');
+      set({user:null,token:null});
     }
   }
 }));

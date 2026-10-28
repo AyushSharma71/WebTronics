@@ -1,11 +1,20 @@
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import useCartStore from '../store/cartStore'
+import useAuthStore from '../store/authStore';
+
 
 function ProductCard({ product }) {
   const { addToCart } = useCartStore();
+  const {user} = useAuthStore();
+  const navigate = useNavigate();
+
 
   const handleAddToCart = (e) => {
     e.preventDefault();
+    if(!user){
+      navigate('/login');
+      return;
+    }
     addToCart(product);
   };
 

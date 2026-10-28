@@ -14,7 +14,7 @@ function Home() {
             className="bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-100 transition-colors"
           >
             Shop Now
-          </Link>
+          </Link> 
         </div>
       </div>
 

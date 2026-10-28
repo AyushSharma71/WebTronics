@@ -41,6 +41,7 @@ function Register() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Enter your email"
             />
+            <p className='text-red-600'>Email should in email format</p>
           </div>
 
           <div className="mb-6">
@@ -52,6 +53,7 @@ function Register() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Enter your password"
             />
+            <p className='text-red-600'>Password should be 8 characters</p>
           </div>
 
           <button

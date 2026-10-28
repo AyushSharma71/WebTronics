@@ -8,7 +8,7 @@ function Products() {
 
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts, products]);
+  }, [fetchProducts]);
 
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())

@@ -1,7 +1,8 @@
 const express = require('express');
+const {protect} = require('../middleware/authMiddleware');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/',protect,(req, res) => {
   res.json({ message: 'Cart endpoint' });
 });
 

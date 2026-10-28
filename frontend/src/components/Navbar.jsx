@@ -14,6 +14,8 @@ function Navbar() {
             Webtronics
           </Link>
 
+          
+
           <div className="flex items-center space-x-8">
             <Link to="/products" className="hover:text-indigo-200 text-lg">
               Products

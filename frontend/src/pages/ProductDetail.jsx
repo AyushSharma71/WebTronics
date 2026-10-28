@@ -2,18 +2,24 @@ import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import useProductStore from '../store/productStore'
 import useCartStore from '../store/cartStore'
+import useAuthStore from '../store/authStore'
 
 function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { product, isLoading, fetchProductById } = useProductStore();
   const { addToCart } = useCartStore();
+  const {user} = useAuthStore();
 
   useEffect(() => {
     fetchProductById(id);
   }, [id]);
 
   const handleAddToCart = () => {
+    if (!user) {
+      navigate('/login');
+      return;
+    }
     addToCart(product);
     navigate('/cart');
   };
@@ -22,6 +28,22 @@ function ProductDetail() {
     return (
       <div className="flex justify-center items-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+      </div>
+    );
+  }
+
+  if (!product) {
+    return (
+      <div className="container mx-auto px-4 py-16 text-center">
+        <h1 className="text-2xl font-bold mb-4">
+          Product not found
+        </h1>
+        <button
+          onClick={() => navigate('/products')}
+          className="text-indigo-600 underline"
+        >
+          Back to Products
+        </button>
       </div>
     );
   }
