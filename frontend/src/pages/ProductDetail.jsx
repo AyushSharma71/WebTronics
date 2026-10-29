@@ -62,11 +62,11 @@ function ProductDetail() {
           <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
           <div className="flex items-center mb-4">
             <span className="text-yellow-400 text-xl">★</span>
-            <span className="text-gray-600 ml-2">{product.rating} ({product.numReviews} reviews)</span>
+            <span className="text-gray-600 dark:text-gray-300 ml-2">{product.rating} ({product.numReviews} reviews)</span>
           </div>
-          <p className="text-gray-600 mb-6">{product.description}</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">{product.description}</p>
           <p className="text-3xl font-bold text-indigo-600 mb-6">${product.price}</p>
-          <p className="text-gray-500 mb-6">
+          <p className="text-gray-500 dark:text-gray-400 mb-6">
             {product.stock > 0 ? (
               <span className="text-green-600">In Stock ({product.stock} available)</span>
             ) : (

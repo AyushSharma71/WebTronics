@@ -37,15 +37,15 @@ function Orders() {
       <h1 className="text-3xl font-bold mb-8">My Orders</h1>
 
       {orders.length === 0 ? (
-        <p className="text-center text-gray-500">You haven't placed any orders yet.</p>
+        <p className="text-center text-gray-500 dark:text-gray-400">You haven't placed any orders yet.</p>
       ) : (
         <div className="space-y-6">
           {orders.map(order => (
-            <div key={order._id} className="bg-white p-6 rounded-lg shadow">
+            <div key={order._id} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
               <div className="flex justify-between items-center mb-4">
                 <div>
-                  <p className="text-gray-500">Order ID: {order._id}</p>
-                  <p className="text-gray-500">Date: {new Date(order.createdAt).toLocaleDateString()}</p>
+                  <p className="text-gray-500 dark:text-gray-400">Order ID: {order._id}</p>
+                  <p className="text-gray-500 dark:text-gray-400">Date: {new Date(order.createdAt).toLocaleDateString()}</p>
                 </div>
                 <span className={`px-4 py-2 rounded-full ${order.status === 'Pending' ? 'bg-yellow-100 text-yellow-800' :
                     order.status === 'Shipped' ? 'bg-blue-100 text-blue-800' :
@@ -55,7 +55,7 @@ function Orders() {
                 </span>
               </div>
 
-              <div className="border-t pt-4">
+              <div className="border-t pt-4 dark:border-gray-700">
                 {order.items.map((item, index) => (
                   <div key={index} className="flex justify-between py-2">
                     <span>{item.name} x {item.quantity}</span>
@@ -64,7 +64,7 @@ function Orders() {
                 ))}
               </div>
 
-              <div className="border-t pt-4 flex justify-between text-lg font-bold">
+              <div className="border-t pt-4 flex justify-between text-lg font-bold dark:border-gray-700">
                 <span>Total</span>
                 <span>${order.totalPrice.toFixed(2)}</span>
               </div>

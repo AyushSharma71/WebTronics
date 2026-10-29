@@ -21,7 +21,7 @@ function Cart() {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-3xl font-bold mb-4">Your Cart is Empty</h1>
-        <p className="text-gray-600 mb-8">Looks like you haven't added any items yet.</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-8">Looks like you haven't added any items yet.</p>
         <Link
           to="/products"
           className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700"
@@ -43,7 +43,7 @@ function Cart() {
           ))}
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow h-fit">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow h-fit">
           <h2 className="text-xl font-bold mb-4">Order Summary</h2>
           <div className="flex justify-between mb-2">
             <span>Subtotal</span>

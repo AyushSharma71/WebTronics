@@ -24,17 +24,17 @@ function Home() {
           <div className="text-center p-6">
             <div className="text-4xl mb-4">🚚</div>
             <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
-            <p className="text-gray-600">On orders over $50</p>
+            <p className="text-gray-600 dark:text-gray-300">On orders over $50</p>
           </div>
           <div className="text-center p-6">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-semibold mb-2">Secure Payment</h3>
-            <p className="text-gray-600">100% secure transactions</p>
+            <p className="text-gray-600 dark:text-gray-300">100% secure transactions</p>
           </div>
           <div className="text-center p-6">
             <div className="text-4xl mb-4">↩️</div>
             <h3 className="text-xl font-semibold mb-2">Easy Returns</h3>
-            <p className="text-gray-600">30-day return policy</p>
+            <p className="text-gray-600 dark:text-gray-300">30-day return policy</p>
           </div>
         </div>
       </div>

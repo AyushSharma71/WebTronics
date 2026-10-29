@@ -54,49 +54,49 @@ function Checkout() {
           <h2 className="text-xl font-bold mb-4">Shipping Address</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-gray-700 mb-2">Address</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2">Address</label>
               <input
                 type="text"
                 name="address"
                 value={formData.address}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400"
                 placeholder="Enter your address"
               />
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-2">City</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2">City</label>
               <input
                 type="text"
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400"
                 placeholder="Enter your city"
               />
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-2">Postal Code</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2">Postal Code</label>
               <input
                 type="text"
                 name="postalCode"
                 value={formData.postalCode}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400"
                 placeholder="Enter postal code"
               />
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-2">Country</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2">Country</label>
               <input
                 type="text"
                 name="country"
                 value={formData.country}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400"
                 placeholder="Enter your country"
               />
             </div>
@@ -112,9 +112,9 @@ function Checkout() {
 
         <div>
           <h2 className="text-xl font-bold mb-4">Order Summary</h2>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
             {items.map(item => (
-              <div key={item._id} className="flex justify-between py-2 border-b">
+              <div key={item._id} className="flex justify-between py-2 border-b dark:border-gray-700">
                 <span>{item.name} x {item.quantity}</span>
                 <span>${(item.price * item.quantity).toFixed(2)}</span>
               </div>

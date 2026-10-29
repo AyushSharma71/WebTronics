@@ -4,7 +4,7 @@ function CartItem({ item }) {
   const { updateQuantity, removeFromCart } = useCartStore();
 
   return (
-    <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow">
+    <div className="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
       <img
         src={item.image}
         alt={item.name}

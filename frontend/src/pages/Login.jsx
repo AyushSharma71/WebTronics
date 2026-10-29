@@ -15,29 +15,29 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-950">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-96">
         <h1 className="text-2xl font-bold text-center mb-6">Login</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 mb-2">Email</label>
+            <label className="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
             <input
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400"
               placeholder="Enter your email"
             />
           </div>
 
           <div className="mb-6">
-            <label className="block text-gray-700 mb-2">Password</label>
+            <label className="block text-gray-700 dark:text-gray-300 mb-2">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400"
               placeholder="Enter your password"
             />
           </div>
@@ -51,7 +51,7 @@ function Login() {
           </button>
         </form>
 
-        <p className="text-center mt-4 text-gray-600">
+        <p className="text-center mt-4 text-gray-600 dark:text-gray-300">
           Don't have an account?{' '}
           <Link to="/register" className="text-indigo-600 hover:underline">
             Register
